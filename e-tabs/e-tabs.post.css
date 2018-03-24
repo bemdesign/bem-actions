@@ -1,0 +1,17 @@
+.e-tabs {
+  &__tab {
+    &_state {
+      &_active {
+        /* Стили для активного таба */
+      }
+    }
+  }
+  &__item {
+    display: none;
+    &_state {
+      &_open {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.e-accordion-toggle {
+  &__arrow {
+    transition-duration: .22s;
+  }
+
+  &__item {
+    cursor: pointer;
+
+    &_view {
+      &_active {
+        /* Возможно подсветка активного пункта или еще какая-нибудь стилизация */
+
+        .e-accordion-toggle__short, .e-accordion__short:hover {
+          background: rgba(0, 0, 0, 0.05) !important;
+        }
+
+        .e-accordion-toggle__arrow {
+          transform: rotate(180deg);
+        }
+
+        &.e-accordion-toggle__item {
+          &_style {
+            &_no {
+              .e-accordion-toggle__short, .e-accordion__short:hover {
+                background: none !important;
+              }
+            }
+            &_yes {
+              .e-accordion-toggle__short, .e-accordion__short:hover {
+                background: rgba(0, 0, 0, 0.05) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__short {
+    cursor: pointer;
+    transition: .22s ease;
+  }
+
+  &__more {
+    display: none;
+    box-sizing: border-box;
+    cursor: default;
+    /*transition: .3s ease;*/
+    background: rgba(0, 0, 0, .02);
+    &_style {
+      &_no {
+        background: none;
+      }
+      &_yes {
+        background: rgba(0, 0, 0, .02);
+      }
+    }
+
+    &_state {
+      &_open {
+        /* Для раскрытия через CSS */
+      }
+    }
+  }
+}
